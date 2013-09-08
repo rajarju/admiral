@@ -63,17 +63,17 @@
 </header>
 
 <div id="main-wrapper">
-  <div id="main" class="main <?php print (!$is_panel) ? 'container' : ''; ?>">
+  <div id="main" class="main <?php print (!$is_panel) ? 'container-fluid' : ''; ?>">
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb" class="visible-desktop">
-        <div class="container">
+        <div class="container-fluid">
           <?php print $breadcrumb; ?>
         </div>
       </div>
     <?php endif; ?>
     <?php if ($messages): ?>
       <div id="messages">
-        <div class="container">
+        <div class="container-fluid">
           <?php print $messages; ?>
         </div>
       </div>
@@ -81,7 +81,7 @@
     <div id="content">
       <a id="main-content"></a>
       <div id="page-header">
-          <div class="container">
+          <div class="container-fluid">
             <?php if ($title): ?>
               <div class="page-header">
                 <h1 class="title"><?php print $title; ?></h1>
@@ -105,7 +105,7 @@
 </div> <!-- /#main-wrapper -->
 
 <footer id="footer" class="footer" role="footer">
-  <div class="container">
+  <div class="container-fluid">
     <?php if ($copyright): ?>
       <small class="copyright pull-left"><?php print $copyright; ?></small>
     <?php endif; ?>
