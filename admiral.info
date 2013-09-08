@@ -24,7 +24,6 @@ scripts[] = assets/javascripts/script.js
 
 ; Regions
 regions[content] = Content
-regions[side_bar] = Side Bar
 
 ; Features
 features[] = logo
