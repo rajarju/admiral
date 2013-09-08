@@ -10361,6 +10361,10 @@ html.js input.throbbing {
   line-height: 10px;
 }
 /* line 26, ../sass/partials/_menu.scss */
+#header .container-fluid #navigation.navbar .navbar-inner .nav-search-collapse .typeahead.dropdown-menu .admin-quick-menu-highligher b {
+  font-weight: bold;
+}
+/* line 29, ../sass/partials/_menu.scss */
 #header .container-fluid #navigation.navbar .navbar-inner .nav-search-collapse .typeahead.dropdown-menu .admin-quick-menu-highligher em {
   font-size: 11px;
   margin: 0;

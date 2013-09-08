@@ -39,7 +39,7 @@
 			},
   		highlighter: function(item){
   			var out = "<div class='admin-quick-menu-highligher'>";
-  			out += item;
+  			out += item.toLowerCase().replace(this.query, "<b>" + this.query + "</b>");
   			out += "<em class='typeahead'> (" + Drupal.settings.admin_quick_menu_hrefs[Drupal.settings.admin_quick_menu_names.indexOf(item)] + ")</em>";
   			out += "</div>";
   			return out;
