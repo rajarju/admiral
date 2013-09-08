@@ -19,12 +19,14 @@ function admiral_form_system_theme_settings_alter(&$form, &$form_state) {
 
   $menus =  menu_get_menus();
 
+  $selected_menu = theme_get_setting('admiral_admin_menu');
+
   $form['admiral_theme_settings']['admiral_admin_menu'] = array(
     '#title' => t('Admin Menu'),
     '#description' => t('Select a menu to show as Admin Menu'),
     '#type' => 'select',
     '#options' => menu_get_menus(),
-    '#default_value' => theme_get_setting('admiral_admin_menu')
+    '#default_value' => $selected_menu ? $selected_menu : 'management',
   );
 
   // Copyright.

@@ -99,7 +99,9 @@
             <?php endif; ?>
           </div>
       </div>
-      <?php print render($page['content']); ?>
+      <div class="container-fluid">
+        <?php print render($page['content']); ?>
+      </div>
     </div>
   </div>
 </div> <!-- /#main-wrapper -->

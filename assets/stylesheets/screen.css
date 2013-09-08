@@ -10333,6 +10333,11 @@ html.js input.throbbing {
     width: 85%;
   }
 }
+/* line 7, ../sass/partials/_layout.scss */
+#main {
+  margin-top: 10px;
+}
+
 /* line 7, ../sass/partials/_menu.scss */
 #header .container-fluid {
   padding-left: 0;
