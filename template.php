@@ -32,10 +32,18 @@ function admiral_preprocess_page(&$variables) {
     $variables['copyright'] = check_markup($copyright['value'], $copyright['format']);
   }
 
-    // Format and add main menu to theme.
-  $main_menu_tree = menu_tree_all_data(theme_get_setting('admiral_admin_menu'));
-  $variables['main_menu'] = menu_tree_output($main_menu_tree);
+  // Format and add main menu to theme.
+  $menu_name = theme_get_setting('admiral_admin_menu');
+  $main_menu_tree = menu_tree_all_data($menu_name);
+  $menu_output =  menu_tree_output($main_menu_tree);
+  
+  // Management has its first level link as Admin
+  // All other menu items are below it
+  if($menu_name == 'management') {
+     $variables['main_menu'] = $menu_output[1]['#below'];
+  }
+  else {
+    $variables['main_menu'] = $menu_output;
+  }
   $variables['main_menu']['#theme_wrappers'] = array('menu_tree__primary');
-
-
 }

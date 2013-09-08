@@ -17,6 +17,8 @@ function admiral_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'fieldset',
   );
 
+  $menus =  menu_get_menus();
+
   $form['admiral_theme_settings']['admiral_admin_menu'] = array(
     '#title' => t('Admin Menu'),
     '#description' => t('Select a menu to show as Admin Menu'),
@@ -33,13 +35,6 @@ function admiral_form_system_theme_settings_alter(&$form, &$form_state) {
     '#format' => $copyright['format'],
     '#default_value' => $copyright['value'] ? $copyright['value'] : t('Drupal is a registered trademark of Dries Buytaert.'),
   );
-
-  module_load_include('inc', 'admin_menu');
-
-  $components = admin_menu_links_menu(admin_menu_tree('management'));
-
-  dpm($components);
-
 
   // Return the additional form widgets.
   return $form;
