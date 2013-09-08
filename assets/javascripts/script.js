@@ -38,8 +38,9 @@
 			  return items.sort();
 			},
   		highlighter: function(item){
-  			var out = "<div class='admin-quick-menu-highligher'>";
-  			out += item.toLowerCase().replace(this.query, "<b>" + this.query + "</b>");
+        var regex = new RegExp( '(' + this.query + ')', 'gi' );
+        var out = "<div class='admin-quick-menu-highligher'>";
+        out += item.replace( regex, "<b>$1</b>" );
   			out += "<em class='typeahead'> (" + Drupal.settings.admin_quick_menu_hrefs[Drupal.settings.admin_quick_menu_names.indexOf(item)] + ")</em>";
   			out += "</div>";
   			return out;
