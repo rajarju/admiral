@@ -8793,3 +8793,15 @@ html.js input.throbbing {
 #header .container-fluid #navigation.navbar .navbar-inner .nav-search-collapse form {
   margin-bottom: 0;
 }
+#header .container-fluid #navigation.navbar .navbar-inner .nav-search-collapse .typeahead.dropdown-menu {
+  min-width: 235px;
+}
+#header .container-fluid #navigation.navbar .navbar-inner .nav-search-collapse .typeahead.dropdown-menu .admin-quick-menu-highligher {
+  line-height: 10px;
+}
+#header .container-fluid #navigation.navbar .navbar-inner .nav-search-collapse .typeahead.dropdown-menu .admin-quick-menu-highligher em {
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}

@@ -34,6 +34,11 @@ function admiral_form_system_theme_settings_alter(&$form, &$form_state) {
     '#default_value' => $copyright['value'] ? $copyright['value'] : t('Drupal is a registered trademark of Dries Buytaert.'),
   );
 
+  module_load_include('inc', 'admin_menu');
+
+  $components = admin_menu_links_menu(admin_menu_tree('management'));
+
+  dpm($components);
 
 
   // Return the additional form widgets.
