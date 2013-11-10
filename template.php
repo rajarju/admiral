@@ -32,6 +32,24 @@ function admiral_preprocess_page(&$variables) {
     $variables['copyright'] = check_markup($copyright['value'], $copyright['format']);
   }
 
+  // Check if jQuery Update is installed and Enabled
+  if(module_exists('jquery_update')){
+    $version = variable_get('jquery_update_jquery_version', '1.5');
+    if (!version_compare($version, '1.7', '>=')) {
+      drupal_set_message(t('Admiral needs jQuery version to be <= 1.7. Select your jquery version from the !jquery_update_settings', array(
+        '!jquery_update_settings' => l('jquery_date config page', 'admin/config/development/jquery_update')
+        )), 'error');  
+    }
+  }
+  else{
+    drupal_set_message(t('Admiral theme requires !jquery_update module to be enabled. Please install !jquery_update module.', array(
+      '!jquery_update' => l('jquery_update', 'https://drupal.org/project/jquery_update', array(
+        'attributes' => array(
+          'target' => '_blank'
+          )
+        )))), 'error');
+  }
+
   // Format and add main menu to theme.
   $menu_name = theme_get_setting('admiral_admin_menu');
   $main_menu_tree = menu_tree_all_data($menu_name);
