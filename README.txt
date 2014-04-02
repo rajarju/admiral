@@ -10,3 +10,17 @@ Admin Menu
 ==========
 The admin menu can show any Drupal menu created in the site.
 This can be selected from the theme settings page.
+
+
+Drupal Project Page
+===================
+[Admiral]https://drupal.org/project/admiral
+
+
+Other tools Required
+====================
+
+
+Branch 7.x-2.x
+--------------
+gem compass compass-radix compass-radix-responsive
